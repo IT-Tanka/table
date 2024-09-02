@@ -1,3 +1,13 @@
+## Task: 
+
+You need to make a table and add a light/dark theme switch.
+Pagination/count per page/ search/row delete should be working items*
+Search can be only by the name of the product, if you wish, you can also search the entire line*
+
+
+You do NOT need the edit action for the row and the “Add a customer” button!
+
+Be sure to use Next + TailwindCSS, everything else is optional
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
