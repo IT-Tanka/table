@@ -1,4 +1,3 @@
-// src/components/Pagination.tsx
 import React from 'react';
 
 interface PaginationProps {
@@ -18,29 +17,22 @@ const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages, onPage
         const pages = [];
         const maxPagesToShow = 2;
 
-        // Always show the first page
         if (totalPages > 1 && currentPage > 1) pages.push(1);
 
-        // Show dots before current page
         if (currentPage > maxPagesToShow + 2) pages.push('...');
 
-        // Show previous pages
         for (let i = Math.max(currentPage - maxPagesToShow, 2); i < currentPage; i++) {
             pages.push(i);
         }
 
-        // Show current page
         pages.push(currentPage);
 
-        // Show next pages
         for (let i = currentPage + 1; i <= Math.min(currentPage + maxPagesToShow, totalPages - 1); i++) {
             pages.push(i);
         }
 
-        // Show dots after current page
         if (currentPage < totalPages - maxPagesToShow - 1) pages.push('...');
 
-        // Always show the last page
         if (totalPages > 1 && currentPage < totalPages) pages.push(totalPages);
 
         return pages.map((page, index) => (
